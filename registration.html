@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students registration</title>
+</head>
+<body>
+    <h1>Students registration form</h1>
+    <form>
+        <label for="Name">Full Name:</label>
+        <input type="text" id="Name" name="Name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="computer-science">Computer Science</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="physics">Physics</option>
+        </select>
+        <br><br>
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        <br><br>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+    </form>
+</body>
+</html>
