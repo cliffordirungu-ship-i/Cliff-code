@@ -1,28 +1,115 @@
+/* General page styling */
 body {
-    background-color: Gold;
+    background-color: #eaf2f8;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: #333;
 }
 
-h1 {
+/* Main profile container */
+.profile-container {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
     text-align: center;
-    color: #57c578;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Main profile picture */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #3498db;
+}
+
+/* Second picture */
+.gallery-picture {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* Main heading */
+h1 {
+    color: #2c3e50;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Subheadings */
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #3498db;
+}
+
+/* Paragraphs */
 p {
     font-size: 16px;
+    color: #555;
+    line-height: 1.7;
 }
-button {
-        
-    background-color: blue;
+
+/* Skills and other lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #eaf2f8;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/* Contact button */
+.contact-button {
+    display: inline-block;
+    background-color: #3498db;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: orange;
+.contact-button:hover {
+    background-color: #21618c;
 }
 
+/* Responsive design for phones */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
 
+    .profile-container {
+        margin: 15px auto;
+        padding: 20px;
+    }
 
+    h1 {
+        font-size: 25px;
+    }
+
+    .gallery-picture {
+        height: auto;
+    }
+}
