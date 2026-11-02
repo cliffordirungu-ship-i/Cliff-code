@@ -83,9 +83,19 @@
         }
 
         .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             color: var(--text);
             font-weight: 600;
             transition: 0.3s ease;
+        }
+
+        .nav-links img {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            object-fit: cover;
         }
 
         .nav-links a:hover {
@@ -174,6 +184,25 @@
             object-fit: cover;
             border-radius: 20px;
             display: block;
+        }
+
+        .image-picker {
+            display: inline-block;
+            margin-top: 14px;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 10px 16px;
+            border-radius: 999px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .image-picker input {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
         }
 
         .stats {
@@ -373,10 +402,10 @@
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home"><img src="images (1).jpeg" alt="">Home</a></li>
+                    <li><a href="#about"><img src="images (2).jpeg" alt="">About</a></li>
+                    <li><a href="#services"><img src="images.jpeg" alt="">Services</a></li>
+                    <li><a href="#contact"><img src="images.jpeg" alt="">Contact</a></li>
                 </ul>
             </nav>
             <a href="#contact" class="btn">Get Started</a>
@@ -413,6 +442,8 @@
 
                 <div class="hero-visual">
                     <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Beautiful property and land landscape">
+                    <label class="image-picker" for="custom-images">Choose your own images</label>
+                    <input id="custom-images" type="file" accept="image/*" multiple aria-label="Choose images for the page">
                 </div>
             </div>
         </section>
@@ -478,5 +509,15 @@
             &copy; 2025 Top Care Land and Holdings. All rights reserved.
         </div>
     </footer>
+    <script>
+        document.getElementById("custom-images").addEventListener("change", function () {
+            const files = Array.from(this.files).filter(file => file.type.startsWith("image/"));
+            if (!files.length) return;
+
+            document.querySelector(".hero-visual img").src = URL.createObjectURL(files[0]);
+            const aboutImage = document.querySelector(".about-image img");
+            aboutImage.src = URL.createObjectURL(files[1] || files[0]);
+        });
+    </script>
 </body>
 </html>
