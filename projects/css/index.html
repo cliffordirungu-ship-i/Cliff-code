@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Resources — Cliff-code</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7f2; color: #1d2b24; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+    main { width: min(960px, calc(100% - 36px)); margin: 0 auto; padding: 48px 0; }
+    header { padding: 28px; margin-bottom: 22px; border-radius: 18px; background: #425b48; color: white; }
+    h1 { margin: 0 0 6px; }
+    header p { margin: 0; color: #e2ece5; }
+    ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; padding: 0; list-style: none; }
+    li a { display: block; height: 100%; padding: 16px 18px; border: 1px solid #e2e8df; border-radius: 12px; background: white; color: #164b3a; font-weight: 700; text-decoration: none; }
+    li a:hover { background: #edf5ef; }
+    .note { padding: 14px 16px; border-left: 4px solid #7da182; background: white; color: #52615b; }
+    .back { display: inline-block; margin-top: 12px; color: #164b3a; font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>CSS Resources</h1><p>Standalone stylesheets available in the repository root.</p></header>
+    <p class="note">These are original stylesheet files. Their matching HTML pages may link to them using relative paths, so they have been left where they are.</p>
+    <ul>
+      <li><a href="../../Coursecards.css">Coursecards.css</a></li>
+      <li><a href="../../Students%20tasks.css">Students tasks.css</a></li>
+      <li><a href="../../Style.CSS">Style.CSS</a></li>
+      <li><a href="../../boxmodel.css">boxmodel.css</a></li>
+      <li><a href="../../flexbox%20course%20cards.css">flexbox course cards.css</a></li>
+      <li><a href="../../marginmodel.css">marginmodel.css</a></li>
+      <li><a href="../../static.css">static.css</a></li>
+      <li><a href="../../styles.css">styles.css</a></li>
+    </ul>
+    <a class="back" href="../index.html">← All categories</a>
+  </main>
+</body>
+</html>
